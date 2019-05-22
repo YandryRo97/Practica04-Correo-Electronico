@@ -12,6 +12,9 @@
         <link rel="stylesheet" rel="stylesheet" href="../../../style.css">
     </head>
     <body>
+        <header>
+            <h1>Nuevo Mensaje</h1>
+        </header>
         <?php $codigo = $_GET['codigo']; ?>
         <nav>
             <ul>
