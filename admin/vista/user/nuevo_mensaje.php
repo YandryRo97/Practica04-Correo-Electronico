@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
-        header("Location: SistemaDeGestion/public/vista/login.html");
+        header("Location: /SistemaDeGestion/public/vista/login.html");
     }
 ?>
 <!DOCTYPE html>
@@ -12,27 +12,24 @@
         <link rel="stylesheet" rel="stylesheet" href="../../../style.css">
     </head>
     <body>
-        <header>
-            <h1>Nuevo Mensaje</h1>
-        </header>
         <?php $codigo = $_GET['codigo']; ?>
         <nav>
             <ul>
-                <li><a href="index.php?codigo=<?php echo $codigo ?>"">Inicio</a></li>
-                <li><a href="crear_mensaje.php?codigo=<?php echo $codigo ?>">Crear Mensaje</a></li>
-                <li><a href="listar_mensaje.php?codigo=<?php echo $codigo ?>">Mensajes</a></li>
-                <li><a href="cuenta.php?codigo=<?php echo $codigo ?>">Perfil</a></li>
+                <li><a href="index.php?codigo=<?php echo $codigo ?>"">Principal</a></li>
+                <li><a href="nuevo_mensaje.php?codigo=<?php echo $codigo ?>">Crear Mensaje</a></li>
+                <li><a href="mensajes_enviados.php?codigo=<?php echo $codigo ?>">Mensajes Enviados</a></li>
+                <li><a href="micuenta.php?codigo=<?php echo $codigo ?>">Perfil</a></li>
                 <li><a href="../../../config/cerrar_sesion.php">Cerrar Sesion</a></li>
             </ul>
         </nav>
-        <form id="formulario01" method="POST" action="../../controladores/user/crear_mensaje.php">
+        <form id="formulario01" method="POST" action="../../controladores/user/nuevo_mensaje.php">
             <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>">
 
-            <label for="remite">De:</label>
+            <label for="remite">From:</label>
             <input type="text" id="remite" name="remite" value="<?php echo buscarCorreo($codigo) ?>" disabled>
             <br>
 
-            <label for="destino">Para:</label>
+            <label for="destino">To:</label>
             <input type="text" id="destino" name="destino" value="">
             <br>
 

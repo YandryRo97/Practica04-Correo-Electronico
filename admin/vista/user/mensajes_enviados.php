@@ -6,67 +6,55 @@
 ?>
 <!DOCTYPE html>
 <html>
-    <?php
-        include '../../../config/conexionBD.php';
-        $codigo_admin = $_GET['codigo_admin'];
-    ?>
     <head>
         <meta charset="UTF-8">
-        <title>Sistema de Gestion de Mensajes Electronicos</title>
-        <link rel="stylesheet" rel="stylesheet" href="../../../style.css">
+        <title>Mensajes Enviados</title>
+        
+        <link rel="stylesheet" rel="stylesheet" href="">
     </head>
     <body>
+        <?php
+            $codigo = $_GET['codigo'];
+        ?>
         <nav>
             <ul>
-                <li><a href="index.php?codigo_admin=<?php echo $codigo_admin ?>">Inicio</a></li>
-                <li><a href="usuarios.php?codigo_admin=<?php echo $codigo_admin ?>">Usuarios</a></li>
+                <li><a href="index.php?codigo=<?php echo $codigo ?>"">Principal</a></li>
+                <li><a href="nuevo_mensaje.php?codigo=<?php echo $codigo ?>">Crear Mensaje</a></li>
+                <li><a href="mensajes_enviados.php?codigo=<?php echo $codigo ?>">Mensajes Enviados</a></li>
+                <li><a href="micuenta.php?codigo=<?php echo $codigo ?>">Perfil</a></li>
                 <li><a href="../../../config/cerrar_sesion.php">Cerrar Sesion</a></li>
             </ul>
         </nav>
-        <section class="info2">
-            <?php
-                $sqli ="SELECT usu_imagen,usu_nombres,usu_apellidos FROM usuario WHERE usu_codigo='$codigo_admin'";
-                $stm = $conn->query($sqli);
-                while ($datos = $stm->fetch_object()){
-            ?>
-                <p><?php echo $datos->usu_nombres." ".$datos->usu_apellidos ?></p>
-                <img src="data:image/jpg; base64,<?php echo base64_encode($datos->usu_imagen) ?>">
-            <?php   
-                }
-            ?>
-        </section>
         <section class="mensajes">
-            <h3>Mensajes Electronicos</h3>
-            <form class="form_mensajes">
-                <table id="buzon">
+            <h3>Mensajes Enviados</h3>
+            <form id="form_mensajes">
+                <input type="text" id="correoBuscar" name="correoBuscar" value="" placeholder="Buscar mensaje electronico...">
+                <input type="submit" id="buscar" name="buscar" value="Buscar" onclick="buscarCorreo()">
+                <table  id="buzon">
                     <tr>
-                        <th>Fecha</th>
-                        <th>Remite</th>
-                        <th>Destinatario</th>
+                        <th>Destino</th>
                         <th>Asunto</th>
-                        <th>Accion</th>
+                        <th>Mensaje</th>
+                        <th>Fecha y hora de envio</th>
                     </tr>
                     <?php
                         include '../../../config/conexionBD.php';
 
 
-                        $sql = "SELECT * FROM correo ORDER BY cor_fecha_envio";
+                        $sql = "SELECT * FROM correo WHERE cor_usu_remite='$codigo' ORDER BY cor_fecha_envio";
                         $result = $conn->query($sql);
                         
 
                         if ($result->num_rows > 0){
                             while($row = $result->fetch_assoc()){
-                                if($row["cor_eliminado"]!='S'){
                                     echo "<tr>";
-                                    echo "<td>" .$row["cor_fecha_envio"]."</td>";
-                                    echo "<td>".buscarCorreo($row["cor_usu_remite"])."</td>";
                                     echo "<td>".buscarCorreo($row["cor_usu_destino"])."</td>";
                                     echo "<td>" .$row["cor_asunto"]."</td>";
-                                    echo "<td class='accion'><a href='eliminar_mensaje.php?codigo_mensaje=".$row['cor_codigo']."&codigo_admin=".$codigo_admin."'>Eliminar</a></td>";
-                                }
+                                    echo "<td>" .$row["cor_mensaje"]."</td>";
+                                    echo "<td>" .$row["cor_fecha_envio"]."</td>";
                             }
                         }else{
-                            echo "<td colspan=4>No hay mensajes electronicos</td>";
+                            echo "<td colspan=4>No tiene mensajes enviados</td>ERROR";
                         }
 
                         function buscarCorreo($codigoCorreo){
@@ -90,7 +78,7 @@
         </section>
         <footer>
             <p>Copyright</p>
-            <p>Yandry Romero 05-2019</p>
+            <p>Yandry Romero - 05/2019</p>
         </footer>
     </body>
 </html>

@@ -1,16 +1,16 @@
 <?php
     session_start();
     if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
-        header("Location: SistemaDeGestion/public/vista/login.html");
+        header("Location: /SistemaDeGestion/public/vista/login.html");
     }
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Sistema Correos Electronicos</title>
+        <title>Sistema de Gestion de Mensajes Electronicos</title>
         <script type="text/javascript" src="ajax.js"></script>
-        <link rel="stylesheet" rel="stylesheet" href="../../../style.css">
+        <link rel="stylesheet" rel="stylesheet" href="">
     </head>
     <body>
         <?php
@@ -19,10 +19,10 @@
         ?>
         <nav>
             <ul>
-            <li><a href="index.php?codigo=<?php echo $codigo ?>"">Inicio</a></li>
-                <li><a href="crear_mensaje.php?codigo=<?php echo $codigo ?>">Crear Mensaje</a></li>
-                <li><a href="listar_mensaje.php?codigo=<?php echo $codigo ?>">Mensajes</a></li>
-                <li><a href="cuenta.php?codigo=<?php echo $codigo ?>">Perfil</a></li>
+                <li><a href="index.php?codigo=<?php echo $codigo ?>"">Principal</a></li>
+                <li><a href="nuevo_mensaje.php?codigo=<?php echo $codigo ?>">Crear Mensaje</a></li>
+                <li><a href="mensajes_enviados.php?codigo=<?php echo $codigo ?>">Mensajes Enviados</a></li>
+                <li><a href="micuenta.php?codigo=<?php echo $codigo ?>">Perfil</a></li>
                 <li><a href="../../../config/cerrar_sesion.php">Cerrar Sesion</a></li>
             </ul>
         </nav>

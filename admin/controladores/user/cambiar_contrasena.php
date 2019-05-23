@@ -28,7 +28,7 @@
                     echo "<p>Error: ".mysqli_error($conn)."</p>";
                 }
             }else{
-                echo "<p>Ingrese contraseña correctamente</p>";
+                echo "<p>La contrasena actual no coincide con nuestros registros!!!</p>";
             }
             echo "<a href='../../vista/user/index.php?codigo=".$codigo."'>Regresar</a>";
             $conn->close();
