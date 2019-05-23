@@ -9,7 +9,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Modificar datos de persona</title>
-        <link rel="stylesheet" rel="stylesheet" href="">
+        <link rel="stylesheet" rel="stylesheet" href="../../../css/estilo_formulario.css">
     </head>
     <body>
         <?php
@@ -53,8 +53,8 @@
                         <input type="email" id="correo" name="correo" value="<?php echo $row["usu_correo"]; ?>" required_placeholder="Ingrese el correo electronico...">
                         <br>
 
-                        <input type="submit" id="modificar" name="modificar" value="Modificar" class="boton" >
-                        <input type="button" id="cancelar" name="cancelar" value="Cancelar" onclick="location.href='micuenta.php?codigo=<?php echo $codigo ?>'" class="boton">
+                        <input type="submit" id="modificar" name="modificar" value="Aceptar" class="boton" >
+                        <input type="button" id="cancelar" name="cancelar" value="Regresar" onclick="location.href='micuenta.php?codigo=<?php echo $codigo ?>'" class="boton">
                     </form>
         <?php            
                 }

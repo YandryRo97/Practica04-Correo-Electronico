@@ -1,0 +1,93 @@
+body{
+    background: linear-gradient(45deg, #BB1881,#F88B50);
+    font-family: sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+
+p{
+    color: white;
+    
+}
+
+form{
+    background-color: #333;
+    width: 500px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+label{
+    color: white;
+    padding: 4px;
+
+}
+input{
+    color: rgb(148, 146, 146);
+    font-size: 20px;
+    margin: 3px;
+    padding: 8px 100px;
+    
+    
+}
+.mensaje{
+    padding: 80px 140px;
+}
+
+th {
+    background: #333;
+    height: 50px;
+    width: 30%;
+    font-weight: lighter;
+    text-shadow: 0 1px 0 white;
+    color: white;
+    border: 1px solid white;
+    box-shadow: inset 0px 1px 1px white;
+    transition: all 0.2s;
+  }
+  tr {
+    background: rgb(255, 254, 254);
+    height: 50px;
+    width: 30%;
+    font-weight: lighter;
+    text-shadow: 0 1px 0 black;
+    color: black;
+    border: 1px solid white;
+    box-shadow: inset 0px 1px 1px white;
+    transition: all 0.2s;
+  }
+  h3{
+      text-align: center;
+      background-color: #333;
+      color: white;
+      font-family: arial;
+      padding: 10px;
+  }
+
+  footer{
+      text-align: center;
+      font-family: arial;
+  }

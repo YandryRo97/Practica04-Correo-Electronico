@@ -9,7 +9,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Nuevo Mensaje</title>
-        <link rel="stylesheet" rel="stylesheet" href="../../../style.css">
+        <link rel="stylesheet" rel="stylesheet" href="../../../css/mensaje.css">
     </head>
     <body>
         <?php $codigo = $_GET['codigo']; ?>
@@ -25,24 +25,22 @@
         <form id="formulario01" method="POST" action="../../controladores/user/nuevo_mensaje.php">
             <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>">
 
-            <label for="remite">From:</label>
-            <input type="text" id="remite" name="remite" value="<?php echo buscarCorreo($codigo) ?>" disabled>
-            <br>
+            
 
-            <label for="destino">To:</label>
+            <label for="destino">Para:</label>
             <input type="text" id="destino" name="destino" value="">
             <br>
 
-            <label for="asunto">Asunto: </label>
+            <label for="destino">Asunto:</label>
             <input type="text" id="asunto" name="asunto" value="">
             <br>
 
-            <label for="mensaje">Mensaje</label>
-            <input type="text" id="mensaje" name="mensaje" value="">
+           
+            <input type="text" class="mensaje" id="mensaje" name="mensaje" value="">
             <br>
 
-            <input type="submit" id="enviar" name="enviar" value="Enviar">
-            <input type="reset" id="cancelar" name="cancelar" value="Cancelar">
+            <input type="submit" id="enviar" name="enviar" value="Enviar    ">
+            <input type="reset" id="cancelar" name="cancelar" value="Cancelar" onclick="location.href='index.php'">
         </form>
         <footer>
             <p>Copyright</p>

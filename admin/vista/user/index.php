@@ -10,7 +10,7 @@
         <meta charset="UTF-8">
         <title>Sistema de Gestion de Mensajes Electronicos</title>
         <script type="text/javascript" src="ajax.js"></script>
-        <link rel="stylesheet" rel="stylesheet" href="">
+        <link rel="stylesheet" rel="stylesheet" href="../../../css/correo.css">
     </head>
     <body>
         <?php
@@ -32,8 +32,8 @@
                 $stm = $conn->query($sqli);
                 while ($datos = $stm->fetch_object()){
             ?>
+                <img class="imagen" src="data:image/jpg; base64,<?php echo base64_encode($datos->usu_imagen) ?>">
                 <p><?php echo $datos->usu_nombres." ".$datos->usu_apellidos ?></p>
-                <img src="data:image/jpg; base64,<?php echo base64_encode($datos->usu_imagen) ?>">
             <?php   
                 }
             ?>

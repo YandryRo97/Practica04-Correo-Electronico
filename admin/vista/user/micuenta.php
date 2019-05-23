@@ -9,7 +9,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Mi Cuenta</title>
-        <link rel="stylesheet" rel="stylesheet" href="">
+        <link rel="stylesheet" rel="stylesheet" href="../../../css/correo.css">
     </head>
     <body>
         <?php 
@@ -32,7 +32,7 @@
                 while ($datos = $stm->fetch_object()){
             ?>
                 <p><?php echo $datos->usu_nombres." ".$datos->usu_apellidos ?></p>
-                <img src="data:image/jpg; base64,<?php echo base64_encode($datos->usu_imagen) ?>">
+                <img class="imagen"src="data:image/jpg; base64,<?php echo base64_encode($datos->usu_imagen) ?>">
             <?php   
                 }
             ?>
@@ -46,9 +46,9 @@
                 <th>Telefono</th>
                 <th>Correo</th>
                 <th>Fecha Nacimiento</th>
-                <th>Avatar</th>
-                <th>Eliminar</th>
-                <th>Modificar</th>
+                <th>Foto Perfil</th>
+                <th>Borrar Cuenta</th>
+                <th>Editar Datos</th>
                 <th>Cambiar contrasena</th>
             </tr>
 

@@ -10,7 +10,7 @@
         <meta charset="UTF-8">
         <title>Mensajes Enviados</title>
         
-        <link rel="stylesheet" rel="stylesheet" href="">
+        <link rel="stylesheet" rel="stylesheet" href="../../../css/correo.css">
     </head>
     <body>
         <?php
