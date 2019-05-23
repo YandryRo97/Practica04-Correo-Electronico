@@ -51,3 +51,16 @@ USUARIO:
 ![image](https://user-images.githubusercontent.com/34008925/58238586-2f1d3180-7d0d-11e9-8b56-7573b41f1f2b.png)
 
 ![image](https://user-images.githubusercontent.com/34008925/58238586-2f1d3180-7d0d-11e9-8b56-7573b41f1f2b.png)
+
+
+![image](https://user-images.githubusercontent.com/34008925/58238672-5116b400-7d0d-11e9-8b6e-b0f44c815be0.png)
+
+
+![image](https://user-images.githubusercontent.com/34008925/58238738-6ee41900-7d0d-11e9-87e2-7d58d96cb2ce.png)
+
+![image](https://user-images.githubusercontent.com/34008925/58238770-7a374480-7d0d-11e9-97b0-f4fb4240d465.png)
+
+CONCLUSIONES:
+
+-	Con la práctica  obtuvimos más conocimiento sobre lo que podemos implementar en una página web con php, los beneficios que obtenemos, también las diferencias de cada una de ellas.
+-	Aprendimos a utilizar diferentes herramientas para llegar a cumplir nuestros objetivos, el análisis, el diseño, el proceso de la utilización de php con la base de datos, unir lo aprendido en base de datos con html y la utilización correcta de los querys para obtener así la información deseada.
