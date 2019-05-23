@@ -13,7 +13,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Sistema de Gestion de Mensajes Electronicos</title>
-        <link rel="stylesheet" rel="stylesheet" href="../../../style.css">
+        <link rel="stylesheet" rel="stylesheet" href="../../../css/correo.css">
     </head>
     <body>
         <nav>

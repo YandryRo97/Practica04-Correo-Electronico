@@ -47,7 +47,6 @@
                 <th>Correo</th>
                 <th>Fecha Nacimiento</th>
                 <th>Foto Perfil</th>
-                <th>Borrar Cuenta</th>
                 <th>Editar Datos</th>
                 <th>Cambiar contrasena</th>
             </tr>
@@ -70,7 +69,6 @@
                             echo "<td>" .$row["usu_correo"]."</td>";
                             echo "<td>" .$row["usu_fecha_nacimiento"]."</td>";
                             echo "<td class='accion'><a href='cambiar_imagen.php?codigo=".$row['usu_codigo']."'>Editar</a></td>";
-                            echo "<td class='accion'><a href='eliminar.php?codigo=".$row['usu_codigo']."'>Eliminar</a></td>";
                             echo "<td class='accion'><a href='modificar.php?codigo=".$row['usu_codigo']."'>Modificar</a></td>";
                             echo "<td class='accion'><a href='cambiar_contrasena.php?codigo=".$row['usu_codigo']."'>Cambiar contrasena</a></td>";
                         }
