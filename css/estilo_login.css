@@ -1,0 +1,40 @@
+h1{
+    text-align: center;
+    font-family: georgia;
+    color: white;
+}
+body{
+    padding: 50px 50px;
+    background-image: url(../imagenes/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+form{
+    background-color: rgb(32, 53, 168);
+    width: 450px;
+    margin: auto;
+    margin-top: 220px;
+    border-radius: 5px;
+}
+
+input{
+    margin-left: 110px;
+}
+
+.ingresar{
+    border-radius: 10px;
+    padding: 10px 30px;
+    color: gray;
+    border-color: white;
+}
+
+.botones{
+    margin-top: 5px;
+    border-radius: 5px; 
+    padding: 10px 20px;
+    margin-left: 160px;
+    background-color: black;
+    color: white;
+    font-family: georgia black;
+    border-color: gray;
+}
